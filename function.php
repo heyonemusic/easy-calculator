@@ -7,7 +7,11 @@ $b = trim($_POST['b']); // Второе число
 function addition($a, $b)
 {
     if (isset($_POST['+'])) {
-        $result = $a + $b;
+        if (is_numeric($a) && is_numeric($b)) {
+            $result = $a + $b;
+        } else {
+            die('Неправильные данные');
+        }
     }
     return $result;
 }
@@ -16,7 +20,11 @@ function addition($a, $b)
 function subsctraction($a, $b)
 {
     if (isset($_POST['-'])) {
-        $result = $a - $b;
+        if (is_numeric($a) && is_numeric($b)) {
+            $result = $a - $b;
+        } else {
+            die('Неправильные данные');
+        }
     }
     return $result;
 }
@@ -25,7 +33,11 @@ function subsctraction($a, $b)
 function division($a, $b)
 {
     if (isset($_POST['/'])) {
-        $result = $a / $b;
+        if (is_numeric($a) && is_numeric($b)) {
+            $result = $a / $b;
+        } else {
+            die('Неправильные данные');
+        }
     }
     return $result;
 }
@@ -34,7 +46,11 @@ function division($a, $b)
 function multiplication($a, $b)
 {
     if (isset($_POST['*'])) {
-        $result = $a * $b;
+        if (is_numeric($a) && is_numeric($b)) {
+            $result = $a * $b;
+        } else {
+            die('Неправильные данные');
+        }
     }
     return $result;
 }
