@@ -34,7 +34,7 @@ function division($a, $b)
 {
     if (isset($_POST['/'])) {
         if (is_numeric($a) && is_numeric($b)) {
-            $result = $a / $b;
+            $result = $b != 0 ? ($a / $b) : die('На ноль делить нельзя!');
         } else {
             die('Неправильные данные');
         }
